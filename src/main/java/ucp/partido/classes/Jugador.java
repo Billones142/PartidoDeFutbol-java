@@ -1,8 +1,8 @@
 package ucp.partido.classes;
 
-import ucp.partido.interfaces.Ijugador;
+import ucp.partido.interfaces.IJugador;
 
-public class Jugador implements Ijugador{
+public class Jugador implements IJugador{
     public Jugador(String nombre, int numeroJugador) {
         super();
         setName(nombre);
@@ -12,6 +12,7 @@ public class Jugador implements Ijugador{
     private String name;
     private TarjetaBase tarjeta;
     private int numero;
+    private String posicion;
 
     /********************Comienzo encapsulacion********************/
     private void setName(String nombre) {
@@ -36,6 +37,14 @@ public class Jugador implements Ijugador{
 
     public TarjetaBase getTarjeta() {
         return tarjeta;
+    }
+
+    public void setPosicion(String position) {
+        this.posicion = position;
+    }
+
+    public String getPosicion() {
+        return posicion;
     }
     /**********************Fin encapsulacion**********************/
 }

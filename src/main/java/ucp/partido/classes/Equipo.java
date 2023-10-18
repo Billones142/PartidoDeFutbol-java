@@ -2,6 +2,8 @@ package ucp.partido.classes;
 
 import java.util.ArrayList;
 
+import ucp.partido.interfaces.IJugador;
+
 public class Equipo {
     public Equipo(String nombre, String abreviatura) {
         super();
@@ -11,7 +13,7 @@ public class Equipo {
 
     private String name;
     private String abreviatura;
-    private ArrayList<Jugador> jugadores= new ArrayList<>();
+    private ArrayList<IJugador> jugadores= new ArrayList<>();
 
     /********************Comienzo encapsulacion********************/
     public String getName() {
@@ -30,7 +32,7 @@ public class Equipo {
         this.abreviatura = ebreviaturaNombre;
     }
 
-    public ArrayList<Jugador> getJugadores() {
+    public ArrayList<IJugador> getJugadores() {
         return jugadores;
     }
     /**********************Fin encapsulacion**********************/
@@ -39,9 +41,9 @@ public class Equipo {
         return getJugadores().size();
     }
 
-    public Jugador obtenerJugador(int numero) {
-        Jugador jugadorObtenido= null;
-        for (Jugador jugador : getJugadores()) {
+    public IJugador obtenerJugador(int numero) {
+        IJugador jugadorObtenido= null;
+        for (IJugador jugador : getJugadores()) {
             if (jugador.getNumero() == numero) {
                 jugadorObtenido= jugador;
             }
@@ -49,7 +51,18 @@ public class Equipo {
         return jugadorObtenido;
     }
 
-    public void agregar(Jugador jugador) { //TODO
+    public void agregar(IJugador jugador) { //TODO
         getJugadores().add(jugador);
+    }
+
+    public String imprimirPlantel() {
+        String plantel= "";
+        for (IJugador iJugador : getJugadores()) {
+            if (!plantel.isEmpty()) {
+                plantel.concat(", ");
+            }
+            plantel.concat("["+iJugador.getNumero()+"]"+iJugador.getName()+"("+iJugador.getPosicion()+")");
+        }
+        return plantel;
     }
 }
