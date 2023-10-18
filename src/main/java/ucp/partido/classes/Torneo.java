@@ -26,7 +26,7 @@ public class Torneo {
         return ganador;
     }
 
-    public void setGanador(Equipo ganador) {
+    private void setGanador(Equipo ganador) {
         this.ganador = ganador;
     }
 

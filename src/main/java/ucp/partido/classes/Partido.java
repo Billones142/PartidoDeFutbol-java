@@ -4,11 +4,11 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Partido {
-    public Partido(Equipo local, Equipo visitante, String fecha) {
+    public Partido(Equipo local, Equipo visitante, String name) {
         super();
-        setFecha(fecha);
         setLocal(local);
         setVisitante(visitante);
+        setName(name);
     }
 
     private String name;
@@ -23,9 +23,9 @@ public class Partido {
     }
 
     public String getName() {
-        return name;
+        return name+" "+getLocal().getAbreviatura()+"x"+getVisitante().getAbreviatura();
     }
-    private void setFecha(String fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

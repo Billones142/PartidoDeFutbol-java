@@ -9,9 +9,9 @@ public class Equipo {
         setAbreviatura(abreviatura);
     }
 
-    String name;
-    String abreviatura;
-    ArrayList<Jugador> jugadores;
+    private String name;
+    private String abreviatura;
+    private ArrayList<Jugador> jugadores= new ArrayList<>();
 
     /********************Comienzo encapsulacion********************/
     public String getName() {
@@ -26,7 +26,7 @@ public class Equipo {
         return abreviatura;
     }
 
-    public void setAbreviatura(String ebreviaturaNombre) {
+    private void setAbreviatura(String ebreviaturaNombre) {
         this.abreviatura = ebreviaturaNombre;
     }
 
@@ -35,11 +35,11 @@ public class Equipo {
     }
     /**********************Fin encapsulacion**********************/
 
-    public int jugadoresCantidad() { //TODO
+    public int jugadoresCantidad() {
         return getJugadores().size();
     }
 
-    public Jugador obtenerJugador(int numero) { //TODO
+    public Jugador obtenerJugador(int numero) {
         Jugador jugadorObtenido= null;
         for (Jugador jugador : getJugadores()) {
             if (jugador.getNumeroJugador() == numero) {
