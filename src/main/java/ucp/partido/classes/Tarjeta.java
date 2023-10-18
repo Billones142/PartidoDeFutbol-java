@@ -7,15 +7,15 @@ public class Tarjeta {
         setJugador(player);
     }
 
-    String color;
-    Jugador jugador;
+    private String color;
+    private Jugador jugador;
 
     /********************Comienzo encapsulacion********************/
-    private String getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    private void setColor(String color) {
         this.color = color;
     }
 

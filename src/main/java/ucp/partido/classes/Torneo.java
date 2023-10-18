@@ -9,7 +9,8 @@ public class Torneo {
     }
 
     String nombre;
-    ArrayList<Equipo> equipos;
+    ArrayList<Equipo> equipos= new ArrayList<>();
+    ArrayList<Partido> partidos= new ArrayList<>();
     Equipo ganador;
 
     /********************Comienzo encapsulacion********************/
@@ -33,18 +34,38 @@ public class Torneo {
         return equipos;
     }
 
-    public Equipo getEquipo(int index) { //TODO
+    public Equipo getEquipo(int index) {
         return equipos.get(index);
     }
 
-    public Equipo getEquipo(String nombre) { //TODO
+    public Equipo getEquipo(String nombre) {
         Equipo equipo= null;
         for (int i = 0; i < getEquipos().size(); i++) {
-            if (getEquipo(i).getNombre().contains(nombre)) {
+            if (getEquipo(i).getName().contains(nombre)) {
                 equipo= getEquipo(i);
             }
         }
         return equipo;
     }
+
+    public ArrayList<Partido> getPartidos() {
+        return partidos;
+    }
     /**********************Fin encapsulacion**********************/
+
+    public int equiposCantidad() {
+        return getEquipos().size();
+    }
+
+    public int partidosCantidad() {
+        return getPartidos().size();
+    }
+
+    public void agregar(Equipo equipo) {
+        getEquipos().add(equipo);
+    }
+
+    public void agregar(Partido partido) {
+        getPartidos().add(partido);
+    }
 }
