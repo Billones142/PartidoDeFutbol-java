@@ -6,12 +6,12 @@ public class Jugador implements Ijugador{
     public Jugador(String nombre, int numeroJugador) {
         super();
         setName(nombre);
-        setNumeroJugador(numeroJugador);
+        setNumero(numeroJugador);
     }
 
     private String name;
-    private Tarjeta tarjeta;
-    private int numeroJugador;
+    private TarjetaBase tarjeta;
+    private int numero;
 
     /********************Comienzo encapsulacion********************/
     private void setName(String nombre) {
@@ -22,19 +22,19 @@ public class Jugador implements Ijugador{
         return name;
     }
 
-    private void setNumeroJugador(int numeroJugador) {
-        this.numeroJugador = numeroJugador;
+    private void setNumero(int numeroJugador) {
+        this.numero = numeroJugador;
     }
 
-    public int getNumeroJugador() {
-        return numeroJugador;
+    public int getNumero() {
+        return numero;
     }
 
-    private void setTarjeta(Tarjeta tarjeta) {
+    private void setTarjeta(TarjetaBase tarjeta) {
         this.tarjeta = tarjeta;
     }
 
-    public Tarjeta getTarjeta() {
+    public TarjetaBase getTarjeta() {
         return tarjeta;
     }
     /**********************Fin encapsulacion**********************/

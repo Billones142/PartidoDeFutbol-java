@@ -1,6 +1,3 @@
-
-
-
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -102,7 +99,7 @@ public class Parcial1Tests {
 
         Partido partidoIda = new Partido(palmeiras, boca, "Semifinal Partido Ida");
 
-        Tarjeta tarjetaRojaParaJugador10DeBoca = new Tarjeta("ROJA", jugador10);
+        TarjetaRoja tarjetaRojaParaJugador10DeBoca = new TarjetaRoja(jugador10);
 
         partidoIda.agregar(tarjetaRojaParaJugador10DeBoca);
 

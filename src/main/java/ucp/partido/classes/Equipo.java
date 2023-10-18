@@ -42,7 +42,7 @@ public class Equipo {
     public Jugador obtenerJugador(int numero) {
         Jugador jugadorObtenido= null;
         for (Jugador jugador : getJugadores()) {
-            if (jugador.getNumeroJugador() == numero) {
+            if (jugador.getNumero() == numero) {
                 jugadorObtenido= jugador;
             }
         }

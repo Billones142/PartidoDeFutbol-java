@@ -1,6 +1,5 @@
 package ucp.partido.classes;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Partido {
@@ -11,11 +10,20 @@ public class Partido {
         setName(name);
     }
 
+    public Partido(Estadio estadio, Equipo local, Equipo visitante, String name) {
+        super();
+        setEstadio(estadio);
+        setLocal(local);
+        setVisitante(visitante);
+        setName(name);
+    }
+
     private String name;
     private String fecha;
     private Equipo local;
     private Equipo visitante;
-    ArrayList<Tarjeta> tarjetas= new ArrayList<>();
+    private Estadio estadio;
+    private ArrayList<TarjetaBase> tarjetas= new ArrayList<>();
 
     /********************Comienzo encapsulacion********************/
     private void setName(String name) {
@@ -49,12 +57,24 @@ public class Partido {
         return visitante;
     }
 
-    public ArrayList<Tarjeta> getTarjetas() {
+    public ArrayList<TarjetaBase> getTarjetas() {
         return tarjetas;
+    }
+
+    public void setEstadio(Estadio estadio) {
+        this.estadio = estadio;
+    }
+
+    public Estadio getEstadio() {
+        return estadio;
     }
     /**********************Fin encapsulacion**********************/
     
-    public void agregar(Tarjeta tarjeta) { //TODO
+    public void agregar(TarjetaBase tarjeta) { //TODO
+        getTarjetas().add(tarjeta);
+    }
+
+    public void name(TarjetaBase tarjeta) { //TODO
         getTarjetas().add(tarjeta);
     }
 
