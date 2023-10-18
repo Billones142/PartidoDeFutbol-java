@@ -1,2 +1,2 @@
 ![Badge](../reports/badge.svg)
-![uml](../uml.jpg)
+![uml](./uml.jpg)
