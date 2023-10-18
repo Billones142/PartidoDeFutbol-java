@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import ucp.partido.classes.*;
 
-public class Parcial1Tests {
+public class ParcialTests1 {
 
     @Test
     public void torneo_agregar_equipos_parcial_ejercicio_ejemplo_01()
