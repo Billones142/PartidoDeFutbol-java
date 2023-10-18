@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import ucp.partido.classes.*;
 
-public class parcialTests2 {
+public class ParcialTests2 {
     @Test
     public void estadio_se_debe_crear_en_una_ubicacion_parcial_ejercicio_ejemplo_05()
     {                

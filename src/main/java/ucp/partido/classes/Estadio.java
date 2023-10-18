@@ -37,6 +37,8 @@ public class Estadio {
         this.pais = pais;
     }
     /**********************Fin encapsulacion**********************/
+
+    @Override
     public String toString() { //TODO
         return getName()+", "+getCiudad()+" ("+getPais()+")";
     }
