@@ -39,7 +39,7 @@ public class Estadio {
     /**********************Fin encapsulacion**********************/
 
     @Override
-    public String toString() { //TODO
+    public String toString() {
         return getName()+", "+getCiudad()+" ("+getPais()+")";
     }
 }

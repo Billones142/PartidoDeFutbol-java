@@ -1,6 +1,7 @@
 package ucp.partido.classes;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import ucp.partido.interfaces.IJugador;
 
@@ -51,18 +52,31 @@ public class Equipo {
         return jugadorObtenido;
     }
 
-    public void agregar(IJugador jugador) { //TODO
+    public void agregar(IJugador jugador) {
         getJugadores().add(jugador);
     }
 
     public String imprimirPlantel() {
         String plantel= "";
-        for (IJugador iJugador : getJugadores()) {
-            if (!plantel.isEmpty()) {
-                plantel.concat(", ");
-            }
-            plantel.concat("["+iJugador.getNumero()+"]"+iJugador.getName()+"("+iJugador.getPosicion()+")");
+        ArrayList<Integer> orden= new ArrayList<>();
+        
+        for (int i = 0; i < getJugadores().size(); i++) {
+            orden.add(getJugadores().get(i).getNumero());
         }
+
+        Collections.sort(orden);
+
+        for (int i = 0; i < orden.size(); i++) {
+            for (IJugador jugador : getJugadores()) {
+                if (jugador.getNumero() == orden.get(i)) {
+                    if (!plantel.isEmpty()) {
+                    plantel= plantel.concat(", ");
+                    }
+                    plantel= plantel.concat("["+jugador.getNumero()+"] "+jugador.getName()+" ("+jugador.getPosicion()+")");
+                }
+            }
+        }
+
         return plantel;
     }
 }

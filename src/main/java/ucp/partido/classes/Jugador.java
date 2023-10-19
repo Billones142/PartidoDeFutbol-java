@@ -31,7 +31,7 @@ public class Jugador implements IJugador{
         return numero;
     }
 
-    private void setTarjeta(TarjetaBase tarjeta) {
+    public void setTarjeta(TarjetaBase tarjeta) {
         this.tarjeta = tarjeta;
     }
 

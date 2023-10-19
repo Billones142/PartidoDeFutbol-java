@@ -70,15 +70,15 @@ public class Partido {
     }
     /**********************Fin encapsulacion**********************/
     
-    public void agregar(TarjetaBase tarjeta) { //TODO
+    public void agregar(TarjetaBase tarjeta) {
         getTarjetas().add(tarjeta);
     }
 
-    public void name(TarjetaBase tarjeta) { //TODO
+    public void name(TarjetaBase tarjeta) {
         getTarjetas().add(tarjeta);
     }
 
-    public int tarjetasCantidad() { //TODO
+    public int tarjetasCantidad() {
         return getTarjetas().size();
     }
 }
