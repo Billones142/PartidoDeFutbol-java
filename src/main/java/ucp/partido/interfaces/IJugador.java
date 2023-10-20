@@ -1,4 +1,4 @@
-package ucp.partido;
+package ucp.partido.interfaces;
 
 public interface IJugador {
     public String getName();

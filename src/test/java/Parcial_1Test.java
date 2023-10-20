@@ -1,4 +1,3 @@
-package ucp.partido;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -6,7 +5,7 @@ import org.junit.Test;
 
 import ucp.partido.*;
 
-public class ParcialTests1 {
+public class Parcial_1Test {
 
     @Test
     public void torneo_agregar_equipos_parcial_ejercicio_ejemplo_01()

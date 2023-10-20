@@ -1,4 +1,3 @@
-package ucp.partido;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -6,7 +5,7 @@ import org.junit.Test;
 
 import ucp.partido.*;
 
-public class ParcialTest4 {
+public class Parcial_4Test {
     @Test
     public void el_var_obtiene_solo_tarjetas_amarillas_del_partido_parcial_ejercicio_ejemplo_07(){
         Equipo boca = new Equipo("Boca Juniors", "BOC");

@@ -3,6 +3,8 @@ package ucp.partido;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import ucp.partido.interfaces.IJugador;
+
 public class Equipo {
     public Equipo(String nombre, String abreviatura) {
         super();

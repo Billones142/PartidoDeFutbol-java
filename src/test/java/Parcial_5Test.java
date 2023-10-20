@@ -1,12 +1,12 @@
-package ucp.partido;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
 
 import ucp.partido.*;
+import ucp.partido.interfaces.IJugador;
 
-public class ParcialTest5 {
+public class Parcial_5Test {
     @Test
     public void equipo_plantel_parcial_ejercicio_ejemplo_09(){
         String resultadoEsperado = "[6] Marcos Rojo (Defensor), [10] Edinson Cavani (Ataque), [19] Valentin Barco (Volante)";
