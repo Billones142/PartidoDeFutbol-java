@@ -15,9 +15,9 @@ public class ParcialTest5 {
         Equipo boca = new Equipo("Boca Juniors", "BOC");
 
 
-        IJugador jugadorBoca6 = new Jugador("Marcos Rojo", 6);
-        IJugador jugadorBoca10 = new Jugador("Edinson Cavani", 10);
-        IJugador jugadorBoca19 = new Jugador("Valentin Barco", 19);
+        IJugadoR jugadorBoca6 = new Jugador("Marcos Rojo", 6);
+        IJugadoR jugadorBoca10 = new Jugador("Edinson Cavani", 10);
+        IJugadoR jugadorBoca19 = new Jugador("Valentin Barco", 19);
         
         //Agregamos en diferente al orden numerico de la camiseta
         boca.agregar(jugadorBoca6);
