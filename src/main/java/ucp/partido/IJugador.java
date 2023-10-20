@@ -1,6 +1,6 @@
-package ucp.partido.interfaces;
+package ucp.partido;
 
-public interface IJugadoR {
+public interface IJugador {
     public String getName();
     public int getNumero();
     public String getPosicion();    

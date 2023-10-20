@@ -1,8 +1,6 @@
 package ucp.partido;
 
-import ucp.partido.interfaces.IJugadoR;
-
-public class Jugador implements IJugadoR{
+public class Jugador implements IJugador{
     public Jugador(String nombre, int numeroJugador) {
         super();
         setName(nombre);
