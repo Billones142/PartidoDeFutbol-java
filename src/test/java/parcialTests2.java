@@ -21,9 +21,9 @@ public class ParcialTests2 {
     public void un_partido_debe_disputarse_en_un_estadio_en_una_fecha_parcial_ejercicio_ejemplo_06(){
         Equipo boca = new Equipo("Boca Juniors", "BOC");
         Equipo palmeiras = new Equipo("Palmeiras", "PAL");
-        
+
         Estadio estadioBombonera = new Estadio("La Bombonera", "Buenos Aires", "Argentina");
-        
+
         Partido partido = new Partido(estadioBombonera, boca, palmeiras, "Semifinal Partido Vuelta");
 
 

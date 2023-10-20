@@ -9,7 +9,7 @@ public class ParcialTest4 {
     public void el_var_obtiene_solo_tarjetas_amarillas_del_partido_parcial_ejercicio_ejemplo_07(){
         Equipo boca = new Equipo("Boca Juniors", "BOC");
         Equipo palmeiras = new Equipo("Palmeiras", "PAL");
-        
+
         Jugador jugadorBoca6 = new Jugador("Marcos Rojo", 6);
         Jugador jugadorBoca10 = new Jugador("Edinson Cavani", 10);
         Jugador jugadorBoca19 = new Jugador("Valentin Barco", 19);

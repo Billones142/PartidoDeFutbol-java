@@ -20,10 +20,10 @@ public class ParcialTests1 {
 
         assertEquals("Boca Juniors", boca.getName());
         assertEquals("BOC", boca.getAbreviatura());
-    
+
         assertEquals("Palmeiras", palmeiras.getName());
         assertEquals("PAL", palmeiras.getAbreviatura());
-        
+
         assertEquals(2, torneo.equiposCantidad());
     }
 
@@ -43,14 +43,14 @@ public class ParcialTests1 {
         torneo.agregar(palmeiras);
         torneo.agregar(internacional);
         torneo.agregar(fluminense);
-            
+
         Partido partido1Ida = new Partido(internacional, fluminense, "Semifinal Partido Ida");
         Partido partido1Vuelta = new Partido(fluminense, internacional, "Semifinal Partido Vuelta");
 
         Partido partido2Ida = new Partido(palmeiras, boca, "Semifinal Partido Ida");
         Partido partido2Vuelta = new Partido(boca, palmeiras, "Semifinal Partido Vuelta");
 
-        
+
         torneo.agregar(partido1Ida);
         torneo.agregar(partido2Vuelta);
 
@@ -71,17 +71,16 @@ public class ParcialTests1 {
     {        
         Equipo boca = new Equipo("Boca Juniors", "BOC");
         
-        Jugador jugador10 = new Jugador("Edinson Cavani", 10);   
+        Jugador jugador10 = new Jugador("Edinson Cavani", 10);
         Jugador jugador19 = new Jugador("Valentin Barco", 19);
 
-        boca.agregar(jugador10);         
-        boca.agregar(jugador19); 
+        boca.agregar(jugador10);
+        boca.agregar(jugador19);
 
         assertEquals(2, boca.jugadoresCantidad());
         
-        assertEquals("Edinson Cavani", boca.obtenerJugador(10).getName());          
-        assertEquals("Valentin Barco", boca.obtenerJugador(19).getName());  
-
+        assertEquals("Edinson Cavani", boca.obtenerJugador(10).getName());
+        assertEquals("Valentin Barco", boca.obtenerJugador(19).getName());
     }
 
 
@@ -107,9 +106,5 @@ public class ParcialTests1 {
         
         assertEquals("ROJA", partidoIda.getTarjetas().get(0).getColor());
         assertEquals("Edinson Cavani", partidoIda.getTarjetas().get(0).getJugador().getName());
-
-
     }
-
-
 }

@@ -12,8 +12,8 @@ public class ParcialTest5 {
 
 
         Equipo boca = new Equipo("Boca Juniors", "BOC");
-        
-        
+
+
         IJugador jugadorBoca6 = new Jugador("Marcos Rojo", 6);
         IJugador jugadorBoca10 = new Jugador("Edinson Cavani", 10);
         IJugador jugadorBoca19 = new Jugador("Valentin Barco", 19);
@@ -22,11 +22,11 @@ public class ParcialTest5 {
         boca.agregar(jugadorBoca6);
         boca.agregar(jugadorBoca19);
         boca.agregar(jugadorBoca10);
-        
+
         jugadorBoca6.setPosicion("Defensor");
         jugadorBoca10.setPosicion("Ataque");
         jugadorBoca19.setPosicion("Volante");
-        
+
         assertEquals(resultadoEsperado, boca.imprimirPlantel());
     }
 }

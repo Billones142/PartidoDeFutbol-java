@@ -36,4 +36,3 @@ public abstract class TarjetaBase{
                     getJugador().getName());
     }
 }
-
