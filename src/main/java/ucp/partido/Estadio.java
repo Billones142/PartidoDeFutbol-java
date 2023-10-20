@@ -1,4 +1,4 @@
-package ucp.partido.classes;
+package ucp.partido;
 
 public class Estadio {
     public Estadio(String name, String ciudad, String pais) {

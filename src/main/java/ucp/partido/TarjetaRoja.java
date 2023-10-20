@@ -1,4 +1,4 @@
-package ucp.partido.classes;
+package ucp.partido;
 
 public class TarjetaRoja extends TarjetaBase {
     public TarjetaRoja(Jugador jugador) {

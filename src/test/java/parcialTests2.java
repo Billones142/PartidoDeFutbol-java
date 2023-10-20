@@ -2,7 +2,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import ucp.partido.classes.*;
+import ucp.partido.*;
 
 public class ParcialTests2 {
     @Test
