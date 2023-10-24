@@ -1,4 +1,4 @@
-package ucp.partido.classes;
+package ucp.partido;
 
 import ucp.partido.interfaces.IJugador;
 
@@ -16,5 +16,4 @@ public class PantallaLed {
         return "[Estadio] " + estadio.getName() + " (" + estadio.getCiudad() +
         " - " + estadio.getPais() + ")";
     }
-    
 }

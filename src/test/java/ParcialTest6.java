@@ -2,7 +2,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import ucp.partido.classes.*;
+import ucp.partido.*;
 import ucp.partido.interfaces.IJugador;
 
 public class ParcialTest6 {
