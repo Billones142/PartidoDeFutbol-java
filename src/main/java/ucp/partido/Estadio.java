@@ -1,6 +1,8 @@
 package ucp.partido;
 
-public class Estadio {
+import ucp.partido.interfaces.IImprimible;
+
+public class Estadio implements IImprimible{
     public Estadio(String name, String ciudad, String pais) {
         super();
         setName(name);
@@ -41,5 +43,10 @@ public class Estadio {
     @Override
     public String toString() {
         return getName()+", "+getCiudad()+" ("+getPais()+")";
+    }
+
+    public String impresion() {
+        return "[Estadio] " + getName() + " (" + getCiudad() +
+        " - " + getPais() + ")";
     }
 }

@@ -3,9 +3,9 @@ package ucp.partido;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import ucp.partido.interfaces.IJugador;
+import ucp.partido.interfaces.*;
 
-public class Equipo {
+public class Equipo implements IImprimible{
     public Equipo(String nombre, String abreviatura) {
         super();
         setName(nombre);
@@ -78,5 +78,9 @@ public class Equipo {
         }
 
         return plantel;
+    }
+
+    public String impresion() { //TODO
+        return "[Equipo] " + getName() + " > " + getAbreviatura();
     }
 }

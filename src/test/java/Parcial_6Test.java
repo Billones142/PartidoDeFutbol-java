@@ -3,9 +3,10 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import ucp.partido.*;
+import ucp.partido.interfaces.IImprimible;
 import ucp.partido.interfaces.IJugador;
 
-public class ParcialTest6 {
+public class Parcial_6Test {
     @Test
     public void pantallas_estadio_parcial_ejercicio_ejemplo_10()
     {        
@@ -21,7 +22,7 @@ public class ParcialTest6 {
         PantallaLed pantallaLed = new PantallaLed();
 
 
-        assertEquals("[Jugador 6] Marcos Rojo > Defensor", pantallaLed.imprimir(jugadorBoca6));
+        assertEquals("[Jugador 6] Marcos Rojo > Defensor", pantallaLed.imprimir((IImprimible)jugadorBoca6));
         assertEquals("[Equipo] Boca Juniors > BOC", pantallaLed.imprimir(boca));
         assertEquals("[Estadio] La Bombonera (Buenos Aires - Argentina)", pantallaLed.imprimir(estadioBombonera));
     }

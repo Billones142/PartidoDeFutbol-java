@@ -1,8 +1,9 @@
 package ucp.partido;
 
+import ucp.partido.interfaces.IImprimible;
 import ucp.partido.interfaces.IJugador;
 
-public class Jugador implements IJugador{
+public class Jugador implements IJugador, IImprimible{
     public Jugador(String nombre, int numeroJugador) {
         super();
         setName(nombre);
@@ -47,4 +48,9 @@ public class Jugador implements IJugador{
         return posicion;
     }
     /**********************Fin encapsulacion**********************/
+
+    public String impresion() {
+        return "[Jugador "+ getNumero() +"] " + getName() +
+        " > " + getPosicion();
+    }
 }
