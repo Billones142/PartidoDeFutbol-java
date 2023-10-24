@@ -1,4 +1,4 @@
-package ucp.partido.classes;
+package ucp.partido;
 
 import ucp.partido.interfaces.IJugador;
 

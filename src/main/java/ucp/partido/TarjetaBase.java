@@ -1,4 +1,4 @@
-package ucp.partido.classes;
+package ucp.partido;
 
 public abstract class TarjetaBase{
 
@@ -36,4 +36,3 @@ public abstract class TarjetaBase{
                     getJugador().getName());
     }
 }
-

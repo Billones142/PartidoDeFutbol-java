@@ -1,4 +1,4 @@
-package ucp.partido.classes;
+package ucp.partido;
 
 import java.util.ArrayList;
 

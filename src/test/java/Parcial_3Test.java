@@ -2,9 +2,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import ucp.partido.classes.*;
+import ucp.partido.*;
 
-public class ParcialTests3 {
+public class Parcial_3Test {
     @Test
     public void torneo_sacar_tarjeta_roja_a_un_jugador_en_un_partido_parcial_ejercicio_ejemplo_04()
     {        

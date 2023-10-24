@@ -1,4 +1,4 @@
-package ucp.partido.classes;
+package ucp.partido;
 
 public class Var {
     public Var(Partido partido) {
