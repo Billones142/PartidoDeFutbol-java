@@ -20,10 +20,19 @@ public class Partido {
 
     private String name;
     private String fecha;
+
     private Equipo local;
     private Equipo visitante;
-    private Estadio estadio;
+    
     private ArrayList<TarjetaBase> tarjetas= new ArrayList<>();
+    
+    private Estadio estadio;
+
+    Arbitro arbitro;
+    Arbitro arbitroAsistente;
+    ArrayList<Arbitro> arbitroLinea= new ArrayList<>();
+
+
 
     /********************Comienzo encapsulacion********************/
     private void setName(String name) {
