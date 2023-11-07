@@ -16,6 +16,8 @@ public class Equipo implements IImprimible{
     private String name;
     private String abreviatura;
     private ArrayList<IJugador> jugadores= new ArrayList<>();
+    private Predicate<IJugador> numeroMayorA7= jugador -> jugador.getNumero() > 7;
+    private Predicate<IJugador> jugadorDeMedioCampo= jugador -> jugador.getPosicion().contains("Mediocampo");
 
     /********************Comienzo encapsulacion********************/
     public String getName() {
@@ -85,16 +87,34 @@ public class Equipo implements IImprimible{
         return "[Equipo] " + getName() + " > " + getAbreviatura();
     }
 
+    public int NumerosMayorQue7() {
+        int cantidad= (int)getJugadores()
+        .stream()
+        .filter(numeroMayorA7)
+        .count();
+        
+        return cantidad;
+    }
+
+
+public int cantidadMediocampo() {
+        int cantidad= (int)getJugadores()
+        .stream()
+        .filter(jugadorDeMedioCampo)
+        .count();
+        
+        return cantidad;
+    }
+
+
     public int cantidadMediocampoConNumerosMayorQue7() {
-        Predicate<IJugador> numeroMayorA7= jugador -> jugador.getNumero() > 7;
-        Predicate<IJugador> jugadorDeMedioCampo= jugador -> jugador.getPosicion().contains("Mediocampo");
         Predicate<IJugador> predicadoConjunto= numeroMayorA7.and(jugadorDeMedioCampo);
         
         int cantidad= (int)getJugadores()
         .stream()
         .filter(predicadoConjunto)
         .count();
-        
+
         return cantidad;
     }
 }

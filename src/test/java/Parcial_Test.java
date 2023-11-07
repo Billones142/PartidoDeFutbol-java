@@ -96,5 +96,7 @@ public class Parcial_Test {
 
 
         assertEquals(3, boca.cantidadMediocampoConNumerosMayorQue7());
+        assertEquals(8, boca.NumerosMayorQue7());
+        assertEquals(5, boca.cantidadMediocampo());
     }
 }
