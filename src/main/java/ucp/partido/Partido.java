@@ -1,6 +1,8 @@
 package ucp.partido;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Partido {
     public Partido(Equipo local, Equipo visitante, String name) {
@@ -19,7 +21,7 @@ public class Partido {
     }
 
     private String name;
-    private String fecha;
+    private Date fecha;
 
     private Equipo local;
     private Equipo visitante;
@@ -42,11 +44,11 @@ public class Partido {
     public String getName() {
         return name+" "+getLocal().getAbreviatura()+"x"+getVisitante().getAbreviatura();
     }
-    public void setFecha(String fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
-    public String getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
@@ -89,5 +91,10 @@ public class Partido {
 
     public int tarjetasCantidad() {
         return getTarjetas().size();
+    }
+
+    public String getFechaFormateada() {
+        SimpleDateFormat date= new SimpleDateFormat("dd/MM/yyyy");
+        return date.format(fecha);
     }
 }

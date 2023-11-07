@@ -2,6 +2,7 @@ package ucp.partido;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.function.Predicate;
 
 import ucp.partido.interfaces.*;
 
@@ -82,5 +83,18 @@ public class Equipo implements IImprimible{
 
     public String impresion() { //TODO
         return "[Equipo] " + getName() + " > " + getAbreviatura();
+    }
+
+    public int cantidadMediocampoConNumerosMayorQue7() {
+        Predicate<IJugador> numeroMayorA7= jugador -> jugador.getNumero() > 7;
+        Predicate<IJugador> jugadorDeMedioCampo= jugador -> jugador.getPosicion().contains("Mediocampo");
+        Predicate<IJugador> predicadoConjunto= numeroMayorA7.and(jugadorDeMedioCampo);
+        
+        int cantidad= (int)getJugadores()
+        .stream()
+        .filter(predicadoConjunto)
+        .count();
+        
+        return cantidad;
     }
 }
