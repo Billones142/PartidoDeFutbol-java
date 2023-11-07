@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Var.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Example</a> &gt; <a href="index.source.html" class="el_package">ucp.partido</a> &gt; <span class="el_source">Var.java</span></div><h1>Var.java</h1><pre class="source lang-java linenums">package ucp.partido;
+
+import java.util.ArrayList;
+import java.util.function.Predicate;
+
+public class Var {
+    public Var(Partido partido) {
+<span class="fc" id="L8">        super();</span>
+<span class="fc" id="L9">        setPartido(partido);</span>
+<span class="fc" id="L10">    }</span>
+
+    private Partido partido;
+    AsistenteDeVideo asistenteDeVideo;
+<span class="fc" id="L14">    ArrayList&lt;AVAR&gt; aVar= new ArrayList&lt;&gt;(); //TODO</span>
+
+    /********************Comienzo encapsulacion********************/
+    private void setPartido(Partido partido) {
+<span class="fc" id="L18">        this.partido = partido;</span>
+<span class="fc" id="L19">    }</span>
+
+    public Partido getPartido() {
+<span class="fc" id="L22">        return partido;</span>
+    }
+
+    public void setAsistenteDeVideo(AsistenteDeVideo asistenteDeVideo) {
+<span class="nc" id="L26">        this.asistenteDeVideo = asistenteDeVideo;</span>
+<span class="nc" id="L27">    }</span>
+
+    public AsistenteDeVideo getAsistenteDeVideo() {
+<span class="nc" id="L30">        return asistenteDeVideo;</span>
+    }
+    /**********************Fin encapsulacion**********************/
+
+    public int cantidadTarjetasRojas() {
+<span class="fc" id="L35">        return (int)getPartido().getTarjetas().stream()</span>
+<span class="fc" id="L36">        .filter(tarjeta -&gt; tarjeta.getColor().contains(&quot;ROJA&quot;))</span>
+<span class="fc" id="L37">        .count();</span>
+    }
+
+    public int cantidadTarjetasAmarillas() {
+<span class="fc" id="L41">        return (int)getPartido().getTarjetas().stream()</span>
+<span class="fc" id="L42">        .filter(tarjeta -&gt; tarjeta.getColor().contains(&quot;AMARILLA&quot;))</span>
+<span class="fc" id="L43">        .count();</span>
+    }
+
+    public int cantidadTarjetas(Equipo equipo) { //TODO
+<span class="nc" id="L47">        return 0;</span>
+        /*return (int)getPartido().getTarjetas().stream()
+        .filter()
+        .count();*/
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
